@@ -1,10 +1,12 @@
-*STATUS-Check-in 
+*FINAL STATUS : 
 # DONE 
 -Create GitHub account and repository 
--Completed Part A code 
+-Completed all codes 
+-completed momo sim project
+- I wrote all answers in one PDF
 
 # IN PROGRESS 
--Working on part B 
+-Nothing
 
 # STUCK ON 
-- Nothing yet
+- Nothing 
