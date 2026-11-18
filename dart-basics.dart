@@ -127,3 +127,53 @@ String initials(String fullName) {
   }
   return result;
 }
+int countD1 = 1;
+
+void bump() {
+  int countD1 = 10;
+  countD1++;
+}
+
+void doubleIt(int value) {
+  value = value * 2;
+}
+
+int addVat(int price, {int rate = 18}) => price + price * rate ~/ 100;
+
+int momoFee(int amount) {
+  if (amount <= 0) return -1;
+  if (amount <= 1000) return 20;
+  if (amount <= 10000) return 100;
+  if (amount <= 150000) return 250;
+  return 1500;
+}
+
+String maskPhone(String phone) {
+  if (phone.length != 10) return 'INVALID';
+  return phone.substring(0, 3) + '***' + phone.substring(8);
+}
+
+void mainD1D2() {
+  print('--- Part D1 ---');
+  bump();
+  print(countD1);
+  int v = 5;
+  doubleIt(v);
+  print(v);
+  print(addVat(1000));
+  print(addVat(999));
+  print(addVat(1000, rate: 0));
+
+  print('--- Part D2 ---');
+  int totalFees = 0;
+  int i = 1;
+  while (i <= d + 3) {
+    int amount = i * 4000 + t * 100;
+    int fee = momoFee(amount);
+    print('Receipt $i | $amount RWF | fee $fee RWF | to ${maskPhone('0788123456')}');
+    totalFees += fee;
+    i++;
+  }
+  print('Total fees: $totalFees RWF');
+}
+
