@@ -61,6 +61,58 @@ int countVowels(String text) {
     if (vowels.contains(text[i])) {
       count++;
     }
+   print('--- Part C1 ---');
+  for (int i = 0; i < 6; i++) {
+    if (i == 2) continue;
+    if (i == 4) break;
+    print(i);
+  }
+
+  print('--- Part C2 ---');
+  int day = 2;
+  switch (day) {
+    case 1:
+    case 2:
+      print('Early week');
+    case 3:
+      print('Midweek');
+    default:
+      print('Weekend soon');
+  }
+
+  print('--- Part C3 ---');
+  int? bonus;
+  print(bonus ?? 50);
+  bonus ??= 70;
+  bonus ??= 90;
+  print(bonus);
+
+  int n = 10;
+  do {
+    print(n);
+    n += 3;
+  } while (n < 10);
+
+  print('--- Part C4 ---');
+  int xC4 = d;
+  String result = '';
+  while (xC4 > 0) {
+    if (xC4 % 2 == 0) {
+      result += 'E';
+    } else {
+      result += '0';
+    }
+    xC4 -= 3;
+  }
+  print(result);
+  print(result.length);
+  print(result.isEmpty ? 'nothing' : result[0]);
+}
+
+void drawTriangle(int height) {
+  // this is C5 function, we will add call later
+}
+ 
   }
   return count;
 }
